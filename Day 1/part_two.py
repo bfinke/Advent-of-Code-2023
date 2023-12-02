@@ -16,12 +16,12 @@ def start_num(string):
 
 def end_num(string):
     chars = []
-    for char in range(len(string) - 1, -1, -1):
+    for char in string[::-1]:
         try:
-            value = int(string[char])
-            return str(value)
+            char = int(char)
+            return str(char)
         except ValueError:
-            chars.insert(0, string[char])
+            chars.insert(0, char)
         for k, v in num_dict.items():
             new_string = "".join(chars)
             if k in new_string:

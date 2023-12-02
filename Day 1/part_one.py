@@ -2,16 +2,16 @@ with open('puzzle.txt') as f:
     nums = []
     for line in f:
         num = []
-        for i in range(len(line)):
+        for i in line:
             try:
-                start = int(line[i])
+                start = int(i)
                 num.append(str(start))
                 break
             except ValueError:
                 continue
-        for i in range(len(line) - 1, -1, -1):
+        for i in line[::-1]:
             try:
-                end = int(line[i])
+                end = int(i)
                 num.append(str(end))
                 break
             except ValueError:
