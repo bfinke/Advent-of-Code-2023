@@ -1,4 +1,4 @@
-with open(input("Enter puzzle: ")) as f:
+with open('puzzle.txt') as f:
     nums = []
     for line in f:
         num = []

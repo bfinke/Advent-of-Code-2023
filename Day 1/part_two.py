@@ -32,7 +32,7 @@ def end_num(string):
 
 num_dict = {'one': '1', 'two': '2', 'three': '3', 'four': '4', 'five': '5',
             'six': '6', 'seven': '7', 'eight': '8', 'nine': '9'}
-with open(input("Enter puzzle: ")) as f:
+with open('puzzle.txt') as f:
     count = 0
     for line in f:
         count += int(start_num(line) + end_num(line))
