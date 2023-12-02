@@ -4,18 +4,15 @@ with open('puzzle.txt') as f:
         num = []
         for i in line:
             try:
-                start = int(i)
-                num.append(str(start))
+                num.append(str(int(i)))
                 break
             except ValueError:
                 continue
         for i in line[::-1]:
             try:
-                end = int(i)
-                num.append(str(end))
+                num.append(str(int(i)))
                 break
             except ValueError:
                 continue
-        value = "".join(num)
-        nums.append(int(value))
+        nums.append(int("".join(num)))
 print(sum(nums))

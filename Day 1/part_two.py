@@ -2,13 +2,11 @@ def start_num(string):
     chars = []
     for char in string:
         try:
-            char = int(char)
-            return str(char)
+            return str(int(char))
         except ValueError:
             chars.append(char)
         for k, v in num_dict.items():
-            new_string = "".join(chars)
-            if k in new_string:
+            if k in "".join(chars):
                 return v
             else:
                 continue
@@ -18,13 +16,11 @@ def end_num(string):
     chars = []
     for char in string[::-1]:
         try:
-            char = int(char)
-            return str(char)
+            return str(int(char))
         except ValueError:
             chars.insert(0, char)
         for k, v in num_dict.items():
-            new_string = "".join(chars)
-            if k in new_string:
+            if k in "".join(chars):
                 return v
             else:
                 continue
